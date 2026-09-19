@@ -40,9 +40,6 @@ GROUP BY item_purchased
 ORDER BY discount_rate DESC
 LIMIT 5;
 -- Q7. Segment customers into New, Returning, and Loyal based on their total number of previous purchases, and show the count of each segment.
- /* WITH clause creates a Common Table Expression (CTE). */
- /* A CTE acts like a temporary result set—almost like a virtual table—that is defined at the beginning 
- of a query and then referenced in main SELECT, INSERT, UPDATE, or DELETE statement. */
  WITH customer_type AS(
  SELECT customer_id, previous_purchases,
  CASE
